@@ -154,6 +154,7 @@ GEM
     puma (3.12.1)
     puma (3.12.1-java)
     rack (2.0.7)
+    rack-cors (1.0.3)
     rack-protection (2.0.5)
       rack
     rack-test (1.1.0)
@@ -270,6 +271,7 @@ DEPENDENCIES
   metainspector
   pg
   puma (~> 3.11)
+  rack-cors
   rails (~> 5.2.3)
   sass-rails (~> 5.0)
   selenium-webdriver
