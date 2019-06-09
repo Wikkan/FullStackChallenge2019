@@ -1,0 +1,1 @@
+json.extract! original_url, :original_url

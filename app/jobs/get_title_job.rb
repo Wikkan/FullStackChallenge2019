@@ -1,6 +1,6 @@
 require 'metainspector'
 
-class GetUrlTitleJob < ApplicationJob
+class GetTitleJob < ApplicationJob
 
   	def get_title(new_url)
 	

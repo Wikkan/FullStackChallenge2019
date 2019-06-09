@@ -39571,3 +39571,1289 @@ Did you mean?  DomainName):
   
 app/controllers/urls_controller.rb:16:in `rescue in show'
 app/controllers/urls_controller.rb:5:in `show'
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:25:10 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juan/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 224ms (Views: 218.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-08 23:25:11 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.5ms)
+
+
+  
+NameError (uninitialized class variable @@DOMAIN_NAME in UrlsController
+Did you mean?  DomainName):
+  
+app/controllers/urls_controller.rb:16:in `rescue in show'
+app/controllers/urls_controller.rb:5:in `show'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:25:17 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/i12t"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["short_url", "http://localhost:3000/i12t"], ["visit_count", 0], ["created_at", "2019-06-09 05:25:19.019106"], ["updated_at", "2019-06-09 05:25:19.019106"]]
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (62.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 500 Internal Server Error in 1116ms (ActiveRecord: 63.4ms)
+
+
+  
+LoadError (Unable to autoload constant GetTitleJob, expected /home/juan/git_workspace/FullStackChallenge2019/app/jobs/get_title_job.rb to define it):
+  
+app/controllers/urls_controller.rb:36:in `create'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:25:57 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to 
+Completed 500 Internal Server Error in 1549ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/urls_controller.rb:46:in `create'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:26:22 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to 
+Completed 500 Internal Server Error in 793ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/urls_controller.rb:46:in `create'
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:26:45 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:26:47 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to 
+Completed 500 Internal Server Error in 820ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/urls_controller.rb:46:in `create'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:27:25 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to 
+Completed 500 Internal Server Error in 543ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/urls_controller.rb:46:in `create'
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:27:41 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:27:46 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:27:47 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to 
+Completed 500 Internal Server Error in 1198ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/urls_controller.rb:45:in `create'
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:28:06 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juan/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 191ms (Views: 186.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:28:08 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to 
+Completed 500 Internal Server Error in 811ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/urls_controller.rb:45:in `create'
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:28:58 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:29:02 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to 
+Completed 500 Internal Server Error in 1495ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/urls_controller.rb:44:in `create'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:30:17 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to http://localhost:3000/shortened?obs=Before+shortened&original_url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F15270522%2Factive-record-and-file-how-do-i-write-json-file-with-my-data&short_url=http%3A%2F%2Flocalhost%3A3000%2Fi12t&visit_count=0
+Completed 302 Found in 690ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/shortened?obs=Before+shortened&original_url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F15270522%2Factive-record-and-file-how-do-i-write-json-file-with-my-data&short_url=http%3A%2F%2Flocalhost%3A3000%2Fi12t&visit_count=0" for 127.0.0.1 at 2019-06-08 23:30:17 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"Before shortened", "original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data", "short_url"=>"http://localhost:3000/i12t", "visit_count"=>"0"}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:31:03 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/15270522/active-record-and-file-how-do-i-write-json-file-with-my-data"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Completed 200 OK in 831ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/urls/create/" for 127.0.0.1 at 2019-06-08 23:32:00 -0600
+Processing by UrlsController#create as */*
+  Parameters: {"original_url"=>"https://www.google.com"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Completed 200 OK in 350ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-08 23:34:08 -0600
+Processing by UrlsController#top as */*
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 200 OK in 29ms (Views: 20.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/show" for 127.0.0.1 at 2019-06-08 23:35:23 -0600
+Processing by UrlsController#show as HTML
+  Parameters: {"short_url"=>"show"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/show"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (uninitialized class variable @@DOMAIN_NAME in UrlsController
+Did you mean?  DomainName):
+  
+app/controllers/urls_controller.rb:16:in `rescue in show'
+app/controllers/urls_controller.rb:5:in `show'
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:35:42 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/i1bl" for 127.0.0.1 at 2019-06-08 23:36:39 -0600
+Processing by UrlsController#show as */*
+  Parameters: {"short_url"=>"i1bl"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/i1bl"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/i1bl"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:41
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/url.rb:43
+  [1m[36mUrl Update (0.3ms)[0m  [1m[33mUPDATE "urls" SET "visit_count" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["visit_count", 2], ["updated_at", "2019-06-09 05:36:39.622973"], ["id", 7]]
+  ↳ app/models/url.rb:43
+  [1m[35m (70.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/url.rb:43
+Redirected to http://www.cristalab.com/tutoriales/redireccionar-urls-mediante-javascript-c40404l/
+Completed 302 Found in 78ms (ActiveRecord: 70.8ms)
+
+
+Started GET "/i1bl" for 127.0.0.1 at 2019-06-08 23:36:50 -0600
+Processing by UrlsController#show as HTML
+  Parameters: {"short_url"=>"i1bl"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/i1bl"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/i1bl"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:41
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/url.rb:43
+  [1m[36mUrl Update (0.2ms)[0m  [1m[33mUPDATE "urls" SET "visit_count" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["visit_count", 3], ["updated_at", "2019-06-09 05:36:50.474021"], ["id", 7]]
+  ↳ app/models/url.rb:43
+  [1m[35m (104.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/url.rb:43
+Redirected to http://www.cristalab.com/tutoriales/redireccionar-urls-mediante-javascript-c40404l/
+Completed 302 Found in 109ms (ActiveRecord: 104.4ms)
+
+
+Started GET "/45s" for 127.0.0.1 at 2019-06-08 23:44:50 -0600
+Processing by UrlsController#show as HTML
+  Parameters: {"short_url"=>"45s"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/45s"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (uninitialized class variable @@DOMAIN_NAME in UrlsController
+Did you mean?  DomainName):
+  
+app/controllers/urls_controller.rb:19:in `rescue in show'
+app/controllers/urls_controller.rb:5:in `show'
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-08 23:44:50 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (uninitialized class variable @@DOMAIN_NAME in UrlsController
+Did you mean?  DomainName):
+  
+app/controllers/urls_controller.rb:19:in `rescue in show'
+app/controllers/urls_controller.rb:5:in `show'
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:45:14 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/523df" for 127.0.0.1 at 2019-06-08 23:45:21 -0600
+Processing by UrlsController#show as HTML
+  Parameters: {"short_url"=>"523df"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/523df"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Redirected to http://localhost:3000/shortened?obs=%22http%3A%2F%2Flocalhost%3A3000%2F523df%22+-%3E+is+not+a+Short+URL++0_0&short_url=&title=&visit_count=
+Redirected to 
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/urls_controller.rb:20:in `rescue in show'
+app/controllers/urls_controller.rb:5:in `show'
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:45:37 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bfhgf" for 127.0.0.1 at 2019-06-08 23:45:39 -0600
+Processing by UrlsController#show as HTML
+  Parameters: {"short_url"=>"bfhgf"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/bfhgf"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Redirected to http://localhost:3000/shortened?obs=%22http%3A%2F%2Flocalhost%3A3000%2Fbfhgf%22+-%3E+is+not+a+Short+URL++0_0&short_url=&title=&visit_count=
+Redirected to 
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/urls_controller.rb:20:in `rescue in show'
+app/controllers/urls_controller.rb:5:in `show'
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:45:57 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sfsf" for 127.0.0.1 at 2019-06-08 23:46:01 -0600
+Processing by UrlsController#show as HTML
+  Parameters: {"short_url"=>"sfsf"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/sfsf"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Redirected to http://localhost:3000/shortened?obs=%22http%3A%2F%2Flocalhost%3A3000%2Fsfsf%22+-%3E+is+not+a+Short+URL++0_0&short_url=&title=&visit_count=
+Completed 302 Found in 11ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/shortened?obs=%22http%3A%2F%2Flocalhost%3A3000%2Fsfsf%22+-%3E+is+not+a+Short+URL++0_0&short_url=&title=&visit_count=" for 127.0.0.1 at 2019-06-08 23:46:01 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"\"http://localhost:3000/sfsf\" -> is not a Short URL  0_0", "short_url"=>"", "title"=>"", "visit_count"=>""}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dfsdf" for 127.0.0.1 at 2019-06-08 23:46:45 -0600
+Processing by UrlsController#show as HTML
+  Parameters: {"short_url"=>"dfsdf"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/dfsdf"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:46:58 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dgdg" for 127.0.0.1 at 2019-06-08 23:47:00 -0600
+Processing by UrlsController#show as HTML
+  Parameters: {"short_url"=>"dgdg"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/dgdg"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 15ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-08 23:47:30 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/SFSD" for 127.0.0.1 at 2019-06-08 23:47:34 -0600
+Processing by UrlsController#show as HTML
+  Parameters: {"short_url"=>"SFSD"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/SFSD"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 24ms (Views: 14.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-08 23:59:40 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://github.com/Wikkan/FullStackChallenge2019"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://github.com/Wikkan/FullStackChallenge2019"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/br03"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://github.com/Wikkan/FullStackChallenge2019"], ["short_url", "http://localhost:3000/br03"], ["visit_count", 0], ["created_at", "2019-06-09 05:59:42.210946"], ["updated_at", "2019-06-09 05:59:42.210946"]]
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[35m (78.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/br03"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Update (0.2ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "GitHub - Wikkan/FullStackChallenge2019"], ["updated_at", "2019-06-09 05:59:43.273891"], ["id", 10]]
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[35m (80.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+Completed 200 OK in 2655ms (Views: 0.6ms | ActiveRecord: 160.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-09 00:22:40 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juan/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 428ms (Views: 423.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-09 00:22:41 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (13.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 41ms (Views: 0.2ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 00:22:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/urls_controller.rb:70:in `format'
+app/controllers/urls_controller.rb:70:in `top'
+Started GET "/top" for 127.0.0.1 at 2019-06-09 00:25:54 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/urls_controller.rb:70:in `format'
+app/controllers/urls_controller.rb:70:in `top'
+Started GET "/top" for 127.0.0.1 at 2019-06-09 00:26:35 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+  Rendering urls/top.html.erb within layouts/application
+  Rendered urls/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 10.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 00:30:14 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juan/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/urls_controller.rb:70:in `format'
+app/controllers/urls_controller.rb:70:in `top'
+Started GET "/" for 127.0.0.1 at 2019-06-09 00:31:35 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juan/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 211ms (Views: 206.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 00:31:38 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/urls_controller.rb:70:in `format'
+app/controllers/urls_controller.rb:70:in `top'
+Started GET "/top.json" for 127.0.0.1 at 2019-06-09 00:31:44 -0600
+Processing by UrlsController#top as JSON
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/urls_controller.rb:70:in `format'
+app/controllers/urls_controller.rb:70:in `top'
+Started GET "/" for 127.0.0.1 at 2019-06-09 00:34:27 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 00:34:31 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 406 Not Acceptable in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/urls_controller.rb:71:in `top'
+Started GET "/top" for 127.0.0.1 at 2019-06-09 00:48:48 -0600
+Processing by UrlsController#top as */*
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `url_url_url_url_url_url_url_url_url_url_url' for #<UrlsController:0x00007f32b0571c98>):
+  
+app/controllers/urls_controller.rb:72:in `block (2 levels) in top'
+app/controllers/urls_controller.rb:71:in `top'
+Started GET "/top.json" for 127.0.0.1 at 2019-06-09 00:48:54 -0600
+Processing by UrlsController#top as JSON
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `url_url_url_url_url_url_url_url_url_url_url' for #<UrlsController:0x00007f32ace23430>):
+  
+app/controllers/urls_controller.rb:72:in `block (2 levels) in top'
+app/controllers/urls_controller.rb:71:in `top'
+Started GET "/top.json" for 127.0.0.1 at 2019-06-09 00:49:18 -0600
+Processing by UrlsController#top as JSON
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `url_url_url_url_url_url_url_url_url_url_url' for #<UrlsController:0x00007f32b005c910>):
+  
+app/controllers/urls_controller.rb:72:in `block (2 levels) in top'
+app/controllers/urls_controller.rb:71:in `top'
+Started GET "/top" for 127.0.0.1 at 2019-06-09 00:49:25 -0600
+Processing by UrlsController#top as */*
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `url_url_url_url_url_url_url_url_url_url_url' for #<UrlsController:0x00007f32b03302b8>):
+  
+app/controllers/urls_controller.rb:72:in `block (2 levels) in top'
+app/controllers/urls_controller.rb:71:in `top'
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-09 01:10:45 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (43.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 102ms (Views: 1.0ms | ActiveRecord: 44.4ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-09 01:10:53 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://github.com/rails/jbuilder"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://github.com/rails/jbuilder"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/5uvt"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Create (54.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://github.com/rails/jbuilder"], ["short_url", "http://localhost:3000/5uvt"], ["visit_count", 0], ["created_at", "2019-06-09 07:10:55.515469"], ["updated_at", "2019-06-09 07:10:55.515469"]]
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[35m (112.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/5uvt"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Update (0.2ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "GitHub - rails/jbuilder: Jbuilder: generate JSON objects with a Builder-style DSL"], ["updated_at", "2019-06-09 07:10:56.622049"], ["id", 11]]
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[35m (82.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://github.com/rails/jbuilder"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to http://localhost:3000/shortened?obs=New+shortened&original_url=https%3A%2F%2Fgithub.com%2Frails%2Fjbuilder&short_url=http%3A%2F%2Flocalhost%3A3000%2F5uvt&title=GitHub+-+rails%2Fjbuilder%3A+Jbuilder%3A+generate+JSON+objects+with+a+Builder-style+DSL&visit_count=0
+Completed 302 Found in 3183ms (ActiveRecord: 251.2ms)
+
+
+Started GET "/shortened?obs=New+shortened&original_url=https%3A%2F%2Fgithub.com%2Frails%2Fjbuilder&short_url=http%3A%2F%2Flocalhost%3A3000%2F5uvt&title=GitHub+-+rails%2Fjbuilder%3A+Jbuilder%3A+generate+JSON+objects+with+a+Builder-style+DSL&visit_count=0" for 127.0.0.1 at 2019-06-09 01:10:56 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"New shortened", "original_url"=>"https://github.com/rails/jbuilder", "short_url"=>"http://localhost:3000/5uvt", "title"=>"GitHub - rails/jbuilder: Jbuilder: generate JSON objects with a Builder-style DSL", "visit_count"=>"0"}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 86ms (Views: 85.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-09 01:12:07 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://github.com/rails/jbuilder"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://github.com/rails/jbuilder"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://github.com/rails/jbuilder"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Completed 200 OK in 1270ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-09 01:12:53 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://apidock.com/rails/ActiveRecord/Associations/CollectionProxy/build"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://apidock.com/rails/ActiveRecord/Associations/CollectionProxy/build"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/4rcx"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://apidock.com/rails/ActiveRecord/Associations/CollectionProxy/build"], ["short_url", "http://localhost:3000/4rcx"], ["visit_count", 0], ["created_at", "2019-06-09 07:12:55.556719"], ["updated_at", "2019-06-09 07:12:55.556719"]]
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[35m (85.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/4rcx"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:7
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Update (0.5ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "build (ActiveRecord::Associations::CollectionProxy) - APIdock"], ["updated_at", "2019-06-09 07:12:57.196528"], ["id", 12]]
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[35m (142.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://apidock.com/rails/ActiveRecord/Associations/CollectionProxy/build"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to http://localhost:3000/shortened?obs=New+shortened&original_url=https%3A%2F%2Fapidock.com%2Frails%2FActiveRecord%2FAssociations%2FCollectionProxy%2Fbuild&short_url=http%3A%2F%2Flocalhost%3A3000%2F4rcx&title=build+%28ActiveRecord%3A%3AAssociations%3A%3ACollectionProxy%29+-+APIdock&visit_count=0
+Completed 302 Found in 3478ms (ActiveRecord: 231.7ms)
+
+
+Started GET "/shortened?obs=New+shortened&original_url=https%3A%2F%2Fapidock.com%2Frails%2FActiveRecord%2FAssociations%2FCollectionProxy%2Fbuild&short_url=http%3A%2F%2Flocalhost%3A3000%2F4rcx&title=build+%28ActiveRecord%3A%3AAssociations%3A%3ACollectionProxy%29+-+APIdock&visit_count=0" for 127.0.0.1 at 2019-06-09 01:12:57 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"New shortened", "original_url"=>"https://apidock.com/rails/ActiveRecord/Associations/CollectionProxy/build", "short_url"=>"http://localhost:3000/4rcx", "title"=>"build (ActiveRecord::Associations::CollectionProxy) - APIdock", "visit_count"=>"0"}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-09 01:13:22 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-09 01:13:24 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://recalll.co/ask/v/topic/ArgumentError-%28too-few-arguments%29%3A-when-calling-format.json-on-rails-4.04/55605ed32bd2734e588b4da9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://recalll.co/ask/v/topic/ArgumentError-%28too-few-arguments%29%3A-when-calling-format.json-on-rails-4.04/55605ed32bd2734e588b4da9"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/4a18"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Create (0.6ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://recalll.co/ask/v/topic/ArgumentError-%28too-few-arguments%29%3A-when-calling-format.json-on-rails-4.04/55605ed32bd2734e588b4da9"], ["short_url", "http://localhost:3000/4a18"], ["visit_count", 0], ["created_at", "2019-06-09 07:13:25.729838"], ["updated_at", "2019-06-09 07:13:25.729838"]]
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[35m (78.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/4a18"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Update (0.3ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "\n                    ArgumentError (too few arguments): when calling format.json on rails 4.04? - Recalll\n                        "], ["updated_at", "2019-06-09 07:13:26.927885"], ["id", 13]]
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[35m (69.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+Completed 406 Not Acceptable in 2534ms (ActiveRecord: 153.3ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/urls_controller.rb:47:in `create'
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-09 01:16:32 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 10ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-09 01:16:33 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://recalll.co/ask/v/topic/ArgumentError-%28too-few-arguments%29%3A-when-calling-format.json-on-rails-4.04/55605ed32bd2734e588b4da9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://recalll.co/ask/v/topic/ArgumentError-%28too-few-arguments%29%3A-when-calling-format.json-on-rails-4.04/55605ed32bd2734e588b4da9"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://recalll.co/ask/v/topic/ArgumentError-%28too-few-arguments%29%3A-when-calling-format.json-on-rails-4.04/55605ed32bd2734e588b4da9"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Completed 200 OK in 2044ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-09 01:16:41 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-09 01:16:49 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-09 01:16:49 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-09 01:16:51 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/22943892/actioncontrollerunknownformat"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/22943892/actioncontrollerunknownformat"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/e8k6"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://stackoverflow.com/questions/22943892/actioncontrollerunknownformat"], ["short_url", "http://localhost:3000/e8k6"], ["visit_count", 0], ["created_at", "2019-06-09 07:16:52.131770"], ["updated_at", "2019-06-09 07:16:52.131770"]]
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[35m (77.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/e8k6"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Update (0.3ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "ruby - ActionController::UnknownFormat - Stack Overflow"], ["updated_at", "2019-06-09 07:16:53.155663"], ["id", 14]]
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[35m (85.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/22943892/actioncontrollerunknownformat"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to http://localhost:3000/shortened?obs=New+shortened&original_url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F22943892%2Factioncontrollerunknownformat&short_url=http%3A%2F%2Flocalhost%3A3000%2Fe8k6&title=ruby+-+ActionController%3A%3AUnknownFormat+-+Stack+Overflow&visit_count=0
+Completed 302 Found in 1888ms (ActiveRecord: 164.6ms)
+
+
+Started GET "/shortened?obs=New+shortened&original_url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F22943892%2Factioncontrollerunknownformat&short_url=http%3A%2F%2Flocalhost%3A3000%2Fe8k6&title=ruby+-+ActionController%3A%3AUnknownFormat+-+Stack+Overflow&visit_count=0" for 127.0.0.1 at 2019-06-09 01:16:53 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"New shortened", "original_url"=>"https://stackoverflow.com/questions/22943892/actioncontrollerunknownformat", "short_url"=>"http://localhost:3000/e8k6", "title"=>"ruby - ActionController::UnknownFormat - Stack Overflow", "visit_count"=>"0"}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/create.json" for 127.0.0.1 at 2019-06-09 01:17:40 -0600
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://www.google.com/search?client=ubuntu", "channel"=>"fs", "q"=>"ActionController::UnknownFormat", "ie"=>"utf-8", "oe"=>"utf-8"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com/search?client=ubuntu"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/uqps"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:18
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Create (0.8ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://www.google.com/search?client=ubuntu"], ["short_url", "http://localhost:3000/uqps"], ["visit_count", 0], ["created_at", "2019-06-09 07:17:41.182847"], ["updated_at", "2019-06-09 07:17:41.182847"]]
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[35m (86.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/uqps"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:7
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Update (0.8ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "Google"], ["updated_at", "2019-06-09 07:17:41.751060"], ["id", 15]]
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[35m (61.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+Completed 200 OK in 1210ms (Views: 0.3ms | ActiveRecord: 151.4ms)
+
+
+Started POST "/urls/create.json" for 127.0.0.1 at 2019-06-09 01:17:56 -0600
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://www.google.com/search?client=ubuntu", "channel"=>"fs", "q"=>"ActionController::UnknownFormat", "ie"=>"utf-8", "oe"=>"utf-8"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com/search?client=ubuntu"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com/search?client=ubuntu"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Completed 200 OK in 538ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/urls/create.json" for 127.0.0.1 at 2019-06-09 01:20:03 -0600
+  
+SyntaxError (/home/juan/git_workspace/FullStackChallenge2019/app/controllers/urls_controller.rb:49: syntax error, unexpected tLABEL, expecting do or '{' or '('
+...son { render json: render json: {status: 'SUCCESS', data:url...
+...                          ^~~~~
+/home/juan/git_workspace/FullStackChallenge2019/app/controllers/urls_controller.rb:49: syntax error, unexpected ',', expecting '}'
+...'SUCCESS', data:url.short_url}, status: :ok }
+...                              ^):
+  
+app/controllers/urls_controller.rb:49: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/controllers/urls_controller.rb:49: syntax error, unexpected ',', expecting '}'
+Started POST "/urls/create.json" for 127.0.0.1 at 2019-06-09 01:22:04 -0600
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://www.google.com/search?client=ubuntu", "hs"=>"KZa", "channel"=>"fs", "ei"=>"DrP8XJmxE46c5gLt94uABg", "q"=>"golasos", "oq"=>"golas", "gs_l"=>"psy-ab.3.0.0j0i10l9.101895.102367..103497...0.0..1.161.615.0j5......0....1..gws-wiz.......0i131.FrQhxRXNBMo"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.7ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com/search?client=ubuntu"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com/search?client=ubuntu"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Completed 200 OK in 559ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-09 01:22:28 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-09 01:22:30 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://www.google.com/search?client=ubuntu&hs=0aa&channel=fs&ei=drP8XM6FNIH_5gKj2LCoBg&q=golazos&oq=golasos&gs_l=psy-ab.1.0.0i71l8.0.0..49023...0.0..0.0.0.......0......gws-wiz.7BoRQQ5oTtc"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com/search?client=ubuntu&hs=0aa&channel=fs&ei=drP8XM6FNIH_5gKj2LCoBg&q=golazos&oq=golasos&gs_l=psy-ab.1.0.0i71l8.0.0..49023...0.0..0.0.0.......0......gws-wiz.7BoRQQ5oTtc"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/67ok"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://www.google.com/search?client=ubuntu&hs=0aa&channel=fs&ei=drP8XM6FNIH_5gKj2LCoBg&q=golazos&oq=golasos&gs_l=psy-ab.1.0.0i71l8.0.0..49023...0.0..0.0.0.......0......gws-wiz.7BoRQQ5oTtc"], ["short_url", "http://localhost:3000/67ok"], ["visit_count", 0], ["created_at", "2019-06-09 07:22:31.178017"], ["updated_at", "2019-06-09 07:22:31.178017"]]
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[35m (70.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/67ok"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Update (0.3ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "golazos - Buscar con Google"], ["updated_at", "2019-06-09 07:22:31.908746"], ["id", 16]]
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[35m (83.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com/search?client=ubuntu&hs=0aa&channel=fs&ei=drP8XM6FNIH_5gKj2LCoBg&q=golazos&oq=golasos&gs_l=psy-ab.1.0.0i71l8.0.0..49023...0.0..0.0.0.......0......gws-wiz.7BoRQQ5oTtc"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to http://localhost:3000/shortened?obs=New+shortened&original_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fclient%3Dubuntu%26hs%3D0aa%26channel%3Dfs%26ei%3DdrP8XM6FNIH_5gKj2LCoBg%26q%3Dgolazos%26oq%3Dgolasos%26gs_l%3Dpsy-ab.1.0.0i71l8.0.0..49023...0.0..0.0.0.......0......gws-wiz.7BoRQQ5oTtc&short_url=http%3A%2F%2Flocalhost%3A3000%2F67ok&title=golazos+-+Buscar+con+Google&visit_count=0
+Completed 302 Found in 1443ms (ActiveRecord: 156.3ms)
+
+
+Started GET "/shortened?obs=New+shortened&original_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fclient%3Dubuntu%26hs%3D0aa%26channel%3Dfs%26ei%3DdrP8XM6FNIH_5gKj2LCoBg%26q%3Dgolazos%26oq%3Dgolasos%26gs_l%3Dpsy-ab.1.0.0i71l8.0.0..49023...0.0..0.0.0.......0......gws-wiz.7BoRQQ5oTtc&short_url=http%3A%2F%2Flocalhost%3A3000%2F67ok&title=golazos+-+Buscar+con+Google&visit_count=0" for 127.0.0.1 at 2019-06-09 01:22:32 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"New shortened", "original_url"=>"https://www.google.com/search?client=ubuntu&hs=0aa&channel=fs&ei=drP8XM6FNIH_5gKj2LCoBg&q=golazos&oq=golasos&gs_l=psy-ab.1.0.0i71l8.0.0..49023...0.0..0.0.0.......0......gws-wiz.7BoRQQ5oTtc", "short_url"=>"http://localhost:3000/67ok", "title"=>"golazos - Buscar con Google", "visit_count"=>"0"}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-09 01:22:49 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://www.google.com/search?client=ubuntu&hs=KZa&channel=fs&ei=DrP8XJmxE46c5gLt94uABg&q=golasos&oq=golas&gs_l=psy-ab.3.0.0j0i10l9.101895.102367..103497...0.0..1.161.615.0j5......0....1..gws-wiz.......0i131.FrQhxRXNBMo"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com/search?client=ubuntu&hs=KZa&channel=fs&ei=DrP8XJmxE46c5gLt94uABg&q=golasos&oq=golas&gs_l=psy-ab.3.0.0j0i10l9.101895.102367..103497...0.0..1.161.615.0j5......0....1..gws-wiz.......0i131.FrQhxRXNBMo"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/aim7"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://www.google.com/search?client=ubuntu&hs=KZa&channel=fs&ei=DrP8XJmxE46c5gLt94uABg&q=golasos&oq=golas&gs_l=psy-ab.3.0.0j0i10l9.101895.102367..103497...0.0..1.161.615.0j5......0....1..gws-wiz.......0i131.FrQhxRXNBMo"], ["short_url", "http://localhost:3000/aim7"], ["visit_count", 0], ["created_at", "2019-06-09 07:22:50.400346"], ["updated_at", "2019-06-09 07:22:50.400346"]]
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[35m (76.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:38
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/aim7"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Update (0.2ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "golasos - Buscar con Google"], ["updated_at", "2019-06-09 07:22:51.210699"], ["id", 17]]
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[35m (120.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:10
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.google.com/search?client=ubuntu&hs=KZa&channel=fs&ei=DrP8XJmxE46c5gLt94uABg&q=golasos&oq=golas&gs_l=psy-ab.3.0.0j0i10l9.101895.102367..103497...0.0..1.161.615.0j5......0....1..gws-wiz.......0i131.FrQhxRXNBMo"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:30
+Redirected to http://localhost:3000/shortened?obs=New+shortened&original_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fclient%3Dubuntu%26hs%3DKZa%26channel%3Dfs%26ei%3DDrP8XJmxE46c5gLt94uABg%26q%3Dgolasos%26oq%3Dgolas%26gs_l%3Dpsy-ab.3.0.0j0i10l9.101895.102367..103497...0.0..1.161.615.0j5......0....1..gws-wiz.......0i131.FrQhxRXNBMo&short_url=http%3A%2F%2Flocalhost%3A3000%2Faim7&title=golasos+-+Buscar+con+Google&visit_count=0
+Completed 302 Found in 1724ms (ActiveRecord: 197.4ms)
+
+
+Started GET "/shortened?obs=New+shortened&original_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fclient%3Dubuntu%26hs%3DKZa%26channel%3Dfs%26ei%3DDrP8XJmxE46c5gLt94uABg%26q%3Dgolasos%26oq%3Dgolas%26gs_l%3Dpsy-ab.3.0.0j0i10l9.101895.102367..103497...0.0..1.161.615.0j5......0....1..gws-wiz.......0i131.FrQhxRXNBMo&short_url=http%3A%2F%2Flocalhost%3A3000%2Faim7&title=golasos+-+Buscar+con+Google&visit_count=0" for 127.0.0.1 at 2019-06-09 01:22:51 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"New shortened", "original_url"=>"https://www.google.com/search?client=ubuntu&hs=KZa&channel=fs&ei=DrP8XJmxE46c5gLt94uABg&q=golasos&oq=golas&gs_l=psy-ab.3.0.0j0i10l9.101895.102367..103497...0.0..1.161.615.0j5......0....1..gws-wiz.......0i131.FrQhxRXNBMo", "short_url"=>"http://localhost:3000/aim7", "title"=>"golasos - Buscar con Google", "visit_count"=>"0"}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top.json" for 127.0.0.1 at 2019-06-09 01:23:54 -0600
+Processing by UrlsController#top as JSON
+  [1m[36mUrl Load (31.8ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 200 OK in 54ms (Views: 10.2ms | ActiveRecord: 32.6ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:05 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/urls_controller.rb:73:in `top'
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-09 01:24:05 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-09 01:24:12 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 11ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 18ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:24:45 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Redirected to http://localhost:3000/top
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-09 01:28:15 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-09 01:28:16 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 500 Internal Server Error in 14ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-06-09 01:28:18 -0600
+Processing by UrlsController#top as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+  Rendering urls/top.html.erb within layouts/application
+  Rendered urls/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/top.json" for 127.0.0.1 at 2019-06-09 01:28:28 -0600
+Processing by UrlsController#top as JSON
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" ASC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/models/url.rb:65
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/i1bl.json" for 127.0.0.1 at 2019-06-09 01:32:45 -0600
+Processing by UrlsController#show as JSON
+  Parameters: {"short_url"=>"i1bl"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/i1bl"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/i1bl"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:41
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/url.rb:43
+  [1m[36mUrl Update (0.2ms)[0m  [1m[33mUPDATE "urls" SET "visit_count" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["visit_count", 4], ["updated_at", "2019-06-09 07:32:45.891443"], ["id", 7]]
+  ↳ app/models/url.rb:43
+  [1m[35m (82.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/url.rb:43
+Completed 200 OK in 94ms (Views: 0.6ms | ActiveRecord: 83.1ms)
+
+
+Started GET "/i1bl" for 127.0.0.1 at 2019-06-09 01:33:05 -0600
+Processing by UrlsController#show as HTML
+  Parameters: {"short_url"=>"i1bl"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/i1bl"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+  [1m[36mCACHE Url Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/i1bl"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:41
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/url.rb:43
+  [1m[36mUrl Update (1.0ms)[0m  [1m[33mUPDATE "urls" SET "visit_count" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["visit_count", 5], ["updated_at", "2019-06-09 07:33:05.336266"], ["id", 7]]
+  ↳ app/models/url.rb:43
+  [1m[35m (118.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/url.rb:43
+Redirected to http://www.cristalab.com/tutoriales/redireccionar-urls-mediante-javascript-c40404l/
+Completed 302 Found in 126ms (ActiveRecord: 120.1ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-09 01:33:09 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "http://localhost:3000/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:35
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/urls_controller.rb:20:in `rescue in show'
+app/controllers/urls_controller.rb:5:in `show'
