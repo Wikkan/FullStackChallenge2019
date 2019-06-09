@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shorted</title>
+	</head>
+	<body>
+		<center>
+			<h2>TOP 100 of URLs_Shortener</h2>
+		</center>
+		<% @top.each do |top| %>
+		   URL original: <%= top.original_url %><br>
+		   Title: <%= top.title %><br>
+		   Short URL: <%= top.short_url %><br>
+		   Visit count: <b><%= top.visit_count %></b><br><br>
+		<% end %>
+	</body>
+</html>
