@@ -6,16 +6,17 @@ class Url < ApplicationRecord
 
   @@URL = "https://fullstackchallenge2019.herokuapp.com/"
 
-  # This algorithm takes the domain of the page and concatenates it to a string formed by 4 characters 
-  # (consisting of letters and numbers) chosen at random. After that, it unites them and verifies if this 
-  # new Url exists in the base. If it exists, it returns to calculate the Url but taking one more character.
+  # This algorithm takes the original domain of the page, codifies it in a base 64. It 
+  # concatenates to a string formed by 2 characters chosen at random from the same base.
+  # After that, join them and verify if this new URL exists in the database. If it exists,
+  # recalculate the URL but take one more character.
   def short_url_algorithm()
 
     unique_id_length = 2
     
     loop do 
-      self.short_url = @@URL + (Base64.encode64(self.original_url)[0..unique_id_length])
-      # self.short_url = @@URL + ([*('a'..'z'),*('0'..'9')]).sample(unique_id_length).join # Other way to make the algorithm
+      self.short_url = @@URL + (Base64.encode64(self.original_url).split('')).sample(unique_id_length).join()
+      
       if Url.find_by_short_url(self.short_url).nil?
         break
       else

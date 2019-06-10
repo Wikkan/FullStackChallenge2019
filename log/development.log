@@ -42303,3 +42303,401 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-06-10 14:34:41 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juan/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 204ms (Views: 199.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/css/materialize.min.css" for 127.0.0.1 at 2019-06-10 14:34:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/css/materialize.min.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 14:34:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-10 14:35:12 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:31
+Completed 500 Internal Server Error in 2237ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `sample' for #<String:0x00007f0a3c46cdd0>):
+  
+app/models/url.rb:17:in `block in short_url_algorithm'
+app/models/url.rb:16:in `loop'
+app/models/url.rb:16:in `short_url_algorithm'
+app/controllers/urls_controller.rb:41:in `create'
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-10 14:35:14 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:36
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/urls_controller.rb:23:in `rescue in show'
+app/controllers/urls_controller.rb:8:in `show'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-10 14:36:36 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:31
+Completed 500 Internal Server Error in 1509ms (ActiveRecord: 1.0ms)
+
+
+  
+TypeError (no implicit conversion of Array into String):
+  
+app/models/url.rb:17:in `+'
+app/models/url.rb:17:in `block in short_url_algorithm'
+app/models/url.rb:16:in `loop'
+app/models/url.rb:16:in `short_url_algorithm'
+app/controllers/urls_controller.rb:41:in `create'
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-10 14:36:38 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:36
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/urls_controller.rb:23:in `rescue in show'
+app/controllers/urls_controller.rb:8:in `show'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-10 14:39:14 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:31
+Completed 500 Internal Server Error in 1440ms (ActiveRecord: 0.4ms)
+
+
+  
+TypeError (no implicit conversion of Array into String):
+  
+app/models/url.rb:17:in `+'
+app/models/url.rb:17:in `block in short_url_algorithm'
+app/models/url.rb:16:in `loop'
+app/models/url.rb:16:in `short_url_algorithm'
+app/controllers/urls_controller.rb:41:in `create'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-10 14:39:34 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:31
+Completed 500 Internal Server Error in 1237ms (ActiveRecord: 0.9ms)
+
+
+  
+TypeError (no implicit conversion of Array into String):
+  
+app/models/url.rb:17:in `+'
+app/models/url.rb:17:in `block in short_url_algorithm'
+app/models/url.rb:16:in `loop'
+app/models/url.rb:16:in `short_url_algorithm'
+app/controllers/urls_controller.rb:41:in `create'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-10 14:40:49 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.7ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:31
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/wX"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"], ["short_url", "https://fullstackchallenge2019.herokuapp.com/wX"], ["visit_count", 0], ["created_at", "2019-06-10 20:40:51.727811"], ["updated_at", "2019-06-10 20:40:51.727811"]]
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[35m (98.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/wX"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[36mUrl Update (0.3ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", " Marc Jacobs printed tie waist dress 060 GREY MULTI LHFLSD"], ["updated_at", "2019-06-10 20:40:53.162460"], ["id", 24]]
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[35m (194.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:31
+Redirected to http://localhost:3000/shortened?obs=New+Url&original_url=http%3A%2F%2Fwww.annesophierigault.fr%2Fmarc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html&short_url=https%3A%2F%2Ffullstackchallenge2019.herokuapp.com%2FwX&title=+Marc+Jacobs+printed+tie+waist+dress+060+GREY+MULTI+LHFLSD&visit_count=0
+Completed 302 Found in 3609ms (ActiveRecord: 296.1ms)
+
+
+Started GET "/shortened?obs=New+Url&original_url=http%3A%2F%2Fwww.annesophierigault.fr%2Fmarc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html&short_url=https%3A%2F%2Ffullstackchallenge2019.herokuapp.com%2FwX&title=+Marc+Jacobs+printed+tie+waist+dress+060+GREY+MULTI+LHFLSD&visit_count=0" for 127.0.0.1 at 2019-06-10 14:40:53 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"New Url", "original_url"=>"http://www.annesophierigault.fr/marc-jacobs-printed-tie-waist-dress-060-grey-multi-lhflsd-p-3451.html", "short_url"=>"https://fullstackchallenge2019.herokuapp.com/wX", "title"=>" Marc Jacobs printed tie waist dress 060 GREY MULTI LHFLSD", "visit_count"=>"0"}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 14:40:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/css/materialize.min.css" for 127.0.0.1 at 2019-06-10 14:40:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/css/materialize.min.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 14:40:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-10 14:41:12 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://stackoverflow.com/questions/975769/how-to-split-a-delimited-string-in-ruby-and-convert-it-to-an-array"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/975769/how-to-split-a-delimited-string-in-ruby-and-convert-it-to-an-array"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:31
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/2H"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://stackoverflow.com/questions/975769/how-to-split-a-delimited-string-in-ruby-and-convert-it-to-an-array"], ["short_url", "https://fullstackchallenge2019.herokuapp.com/2H"], ["visit_count", 0], ["created_at", "2019-06-10 20:41:13.469411"], ["updated_at", "2019-06-10 20:41:13.469411"]]
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[35m (191.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/2H"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[36mUrl Update (0.3ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "How to split a delimited string in Ruby and convert it to an array? - Stack Overflow"], ["updated_at", "2019-06-10 20:41:14.215067"], ["id", 25]]
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[35m (188.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://stackoverflow.com/questions/975769/how-to-split-a-delimited-string-in-ruby-and-convert-it-to-an-array"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:31
+Redirected to http://localhost:3000/shortened?obs=New+Url&original_url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F975769%2Fhow-to-split-a-delimited-string-in-ruby-and-convert-it-to-an-array&short_url=https%3A%2F%2Ffullstackchallenge2019.herokuapp.com%2F2H&title=How+to+split+a+delimited+string+in+Ruby+and+convert+it+to+an+array%3F+-+Stack+Overflow&visit_count=0
+Completed 302 Found in 1685ms (ActiveRecord: 381.3ms)
+
+
+Started GET "/shortened?obs=New+Url&original_url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F975769%2Fhow-to-split-a-delimited-string-in-ruby-and-convert-it-to-an-array&short_url=https%3A%2F%2Ffullstackchallenge2019.herokuapp.com%2F2H&title=How+to+split+a+delimited+string+in+Ruby+and+convert+it+to+an+array%3F+-+Stack+Overflow&visit_count=0" for 127.0.0.1 at 2019-06-10 14:41:14 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"New Url", "original_url"=>"https://stackoverflow.com/questions/975769/how-to-split-a-delimited-string-in-ruby-and-convert-it-to-an-array", "short_url"=>"https://fullstackchallenge2019.herokuapp.com/2H", "title"=>"How to split a delimited string in Ruby and convert it to an array? - Stack Overflow", "visit_count"=>"0"}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 14:41:14 -0600
+Started GET "/css/materialize.min.css" for 127.0.0.1 at 2019-06-10 14:41:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/css/materialize.min.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
