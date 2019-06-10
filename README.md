@@ -1,38 +1,38 @@
 # Full Stack Challenge 2019
 
-Puede ver las especificaciones del proyecto [aquí](https://drive.google.com/file/d/1pDolgbZ-tH192V9HTLl30f85X44DAs1Y/view)
+You can see the project specifications in the following [link](https://drive.google.com/file/d/1pDolgbZ-tH192V9HTLl30f85X44DAs1Y/view)
 
-## Comenzando
+## Starting
 
-Se utilizó **Ruby on Rails** para la elaboración del proyecto.
+** Ruby on Rails ** was used to prepare the project.
 
 
-### Pre-requisitos
+### Requirements
 
 * Ruby 2.6.3
 * Rails 6.0.0
 
-### Instalación
+### Installation
 
-Para una correcta instalación siga los pasos en el siguiente [enlace](https://gorails.com/setup/ubuntu/18.04)
+For a correct installation follow the steps in the following [link](https://gorails.com/setup/ubuntu/18.04)
 
 
-## Características
+## Project features
 
-### Algoritmo
+### Algorithm
 
-* Este algoritmo lo que hace es tomar el dominio de la pagina y lo concatena a un string formado por 4 caracteres (conformado por letras y números) elegidos al azar. 
-* Luego de eso los une y verifica si esta Url nueva existe en la base.
-* Si esta existe vuelve a realizar el cálculo de la Url pero tomando un caracter más.
+* This algorithm takes the original domain of the page, codifies it in a base 64. 
+* It concatenates to a string formed by 2 characters chosen at random from the same base.
+* After that, join them and verify if this new URL exists in the database. 
+* If it exists, recalculate the URL but take one more character.
 
 ```ruby
-def generate_short_url(domain_name)
-    unique_id_length = 4
-    condition = true
-    while(condition)
-        self.short_url = domain_name + ([*('a'..'z'),*('0'..'9')]).sample(unique_id_length).join
+def short_url_algorithm()
+    unique_id_length = 2
+    loop do
+        self.short_url = @@URL + (Base64.encode64(self.original_url).split('')).sample(unique_id_length).join()
         if Url.find_by_short_url(self.short_url).nil?
-             condition = false
+             break
         else
              unique_id_length = unique_id_length + 1
         end
@@ -42,49 +42,50 @@ end
 
 ### API
 
-Existen varios comandos con los que puede probar el API usando cURL. O por medio de una pequeña interfaz, la cual se puede visitar dando click a este [enlace](https://fullstackchallenge2019.herokuapp.com/)
+There are several commands with which you can test the API using cURL. Or by means of a small interface, which can be visited by clicking on this [link](https://fullstackchallenge2019.herokuapp.com/)
 
 #### create
 
-Método POST. Recibe el Url original de la página y devuelve un json con las características, incluyendo la Url recortada.
+POST method. It receives the original URL of the page and returns a json with the characteristics, including the trimmed URL.
 ```bash
 $ curl -X POST -d "original_url=https://www.facebook.com/" https://fullstackchallenge2019.herokuapp.com/urls/create.json
 ```
 
 #### show
 
-Método GET. Muestra la página consultada por medio la Url recortada, la cual devuelve la información por medio de json. 
+GET method. Shows the page consulted by means of the clipped URL, which returns the information through json.
 ```bash
 $ curl https://fullstackchallenge2019.herokuapp.com/z24q.json
 ```
 
 #### top
 
-Método GET. Muestra el top 100 de las páginas más visitas, hechas por medio del sistema.
+GET method. It shows the top 100 of the most visited pages, made through the system.
 ```bash
 $ curl https://fullstackchallenge2019.herokuapp.com/top.json
 ```
 
 #### date
 
-Método GET. Muestra la página más nueva en ser ingresada al sistema
+GET method. Displays the newest page to be entered into the system.
 ```bash
 $ curl https://fullstackchallenge2019.herokuapp.com/date.json
 ```
 
-### Nota
+### Note
 
-* Todas estas consultas puede hacerse por medio de la interfaz con solo escribir en el navegador las rutas, quitando la consulta **curl** y la terminacion **.json**
+* All these queries can be done through the interface with just writing the routes in the browser, removing the query **curl** and ending **.json **
 ```
 https://fullstackchallenge2019.herokuapp.com/top
 ```
-* Puede disfrutas de las aplicación por medio del código desarrollado en React, en el siguiente [enlace](https://github.com/Wikkan/FullStackChallenge2019Web)
+* You can enjoy the application through the code developed in React, in the following [link](https://github.com/Wikkan/FullStackChallenge2019Web)
 
-## Construido con
+## Tools
 
 * Ruby on Rails
-* MetaInspector (gema)
+* MetaInspector (gem)
+* Base64 (gem)
 
-## Autores
+## Authors
 
 * **Josué Jiménez** - [Wikkan](https://github.com/Wikkan)
