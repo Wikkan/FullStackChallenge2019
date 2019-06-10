@@ -3,9 +3,9 @@ require 'urls_controller'
 
 class Url < ApplicationRecord
 
-  # This short_url generator is too simple, uses Base64 module and the initials chars of the original_url variable to generate a code.
-  # Starts using the char number 1 of the string original_url to generate the Base64 code, and take another and another char to 
-  # generate a new code if that code already exist on the database.
+  # Este algoritmo lo que hace es tomar el dominio de la pagina y lo concatena a un string formado por
+  # 4 letras y número elegidos al azar. Luego de eso los une y verifica si esta Url nueva existe en la
+  # base. Si esta existe vuelve a realizar el cálculo de la Url pero tomando un caracter más.
   def generate_short_url(domain_name)
 
     unique_id_length = 4
@@ -25,17 +25,17 @@ class Url < ApplicationRecord
     
   end
 
-  # Look if the url given already was shortened  
+  # Encuenta si el Url ya existe en la base 
   def find_duplicate
     Url.find_by_original_url(self.original_url)
   end
 
-  # Find duplicate using short_url
+  # Encuenta si el Url ya existe recortada en la base 
   def find_by_short_url(short_url)
     Url.find_by_short_url(short_url)
   end
 
-  # Update count of visits
+  # Actualiza la cantidad de visitas de la página
   def update_visits(short_url)
 
     url = Url.find_by_short_url(short_url)
@@ -44,12 +44,12 @@ class Url < ApplicationRecord
   
   end
 
-  # Return true if the url given already was shortened
+  # Verifica si ya existe la Url recortada
   def find?
     find_duplicate.nil?
   end
 
-  # Sanitize and check if URL given has a valid format
+  # Verifica si la Url tiene un formato correcto
   def sanitize?
     begin
       self.original_url.strip!
@@ -60,12 +60,13 @@ class Url < ApplicationRecord
     end
   end
 
-  # Gets the top 100
+  # Devuelve las 100 Urls más visitasdas por la aplicación
   def top
-    Url.order(visit_count: :asc).limit(100).reverse
+    Url.order(visit_count: :desc).limit(100)
   end
 
+  # Devuelve la última Url ingresada
   def date
-    Url.order(created_at: :asc).limit(1).reverse
+    Url.order(created_at: :desc).limit(1)
   end
 end

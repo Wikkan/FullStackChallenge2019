@@ -2,8 +2,9 @@ require 'get_title_job'
 
 class UrlsController < ApplicationController
 
-  @@URL = "https://fullstackchallenge2019.herokuapp.com/"
+  @@URL = "https://fullstackchallenge2019.herokuapp.com/" # Url de heroku con la conexion
 
+  # Redirecciona a la página con el Url creado y devuelve la consulta en formato json
   def show
 
     begin
@@ -20,22 +21,22 @@ class UrlsController < ApplicationController
     rescue
 
       respond_to do |format|
-          format.html { redirect_to shortened_path(original_url: url.original_url, short_url: "", title: "", visit_count: "", obs: "\"" + @@URL + params[:short_url] + "\" -> is not a Short URL  0_0") }
+          format.html { redirect_to shortened_path(original_url: url.original_url, short_url: "", title: "", visit_count: "", obs: "\"" + @@URL + params[:short_url] + "\" -> Url doesn't exist in the base") }
           format.json { render json: {status: 'ERROR'}, status: :error }
       end
         
     end
   end
 
-  # Create a Url object and set the parameters to the object
+  # Crea una nueva Url con la Url original y devuelve la consulta en formato json
   def create
     
     url = Url.new
     url.original_url = params[:original_url]
 
-    if url.sanitize?
+    if url.sanitize? # Verifica que la Url esté bien escrita
 
-      if url.find?
+      if url.find? # Verifica si la Url ya fue acortada anteriormente
 
         url.generate_short_url(@@URL)
         url.visit_count = 0
@@ -45,15 +46,15 @@ class UrlsController < ApplicationController
         job.get_title(url.short_url)
         
         respond_to do |format|
-          format.html { redirect_to shortened_path(original_url: url.original_url, short_url: url.short_url, title: url.find_duplicate.title, visit_count: url.visit_count, obs: "New shortened") }
-          format.json { render json: {status: 'SUCCESS', data:[{original_url: url.original_url, short_url: url.short_url, title: url.find_duplicate.title, visit_count: url.visit_count, obs: "New shortened"}]}, status: :ok }
+          format.html { redirect_to shortened_path(original_url: url.original_url, short_url: url.short_url, title: url.find_duplicate.title, visit_count: url.visit_count, obs: "New Url") }
+          format.json { render json: {status: 'SUCCESS', data:[{original_url: url.original_url, short_url: url.short_url, title: url.find_duplicate.title, visit_count: url.visit_count, obs: "New Url"}]}, status: :ok }
         end
 
       else
 
         respond_to do |format|
-          format.html { redirect_to shortened_path(original_url: url.original_url, short_url: url.find_duplicate.short_url, title: url.find_duplicate.title, visit_count: url.find_duplicate.visit_count, obs: "Before shortened") }
-          format.json { render json: {status: 'SUCCESS', data:[{original_url: url.original_url, short_url: url.find_duplicate.short_url, title: url.find_duplicate.title, visit_count: url.find_duplicate.visit_count, obs: "Before shortened"}]}, status: :ok }
+          format.html { redirect_to shortened_path(original_url: url.original_url, short_url: url.find_duplicate.short_url, title: url.find_duplicate.title, visit_count: url.find_duplicate.visit_count, obs: "The Url has already been shortened") }
+          format.json { render json: {status: 'SUCCESS', data:[{original_url: url.original_url, short_url: url.find_duplicate.short_url, title: url.find_duplicate.title, visit_count: url.find_duplicate.visit_count, obs: "The Url has already been shortened"}]}, status: :ok }
         end
 
       end
@@ -61,13 +62,14 @@ class UrlsController < ApplicationController
     else
 
       respond_to do |format|
-          format.html { redirect_to error_path(original_url: url.original_url, short_url: "", title: "", visit_count: "", obs: "URL unreachable or has invalid format  (0_0)") }
+          format.html { redirect_to error_path(original_url: url.original_url, short_url: "", title: "", visit_count: "", obs: "Url format is invalid") }
           format.json { render json: {status: 'ERROR'}, status: :ok }
       end
 
     end
   end
 
+  # Retorna el top de las páginas más visitasdas con el enlace recortado y devuelve la consulta en formato json
   def top
 
     url = Url.new
@@ -80,6 +82,7 @@ class UrlsController < ApplicationController
 
   end
 
+  # Retorna la página más neva en ser recortada y devuelve la consulta en formato json
   def date
 
     url = Url.new
