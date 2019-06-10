@@ -14,14 +14,14 @@ Se utilizó **Ruby on Rails** para la elaboración del proyecto.
 
 ### Instalación
 
-Para una correcta instalación siga los pasos de este [link](https://gorails.com/setup/ubuntu/18.04)
+Para una correcta instalación siga los pasos en el siguiente [enlace](https://gorails.com/setup/ubuntu/18.04)
 
 
 ## Características
 
 ### Algoritmo
 
-* Este algoritmo lo que hace es tomar el dominio de la pagina y lo concatena a un string formado por 4 letras y número elegidos al azar. 
+* Este algoritmo lo que hace es tomar el dominio de la pagina y lo concatena a un string formado por 4 caracteres (conformado por letras y números) elegidos al azar. 
 * Luego de eso los une y verifica si esta Url nueva existe en la base.
 * Si esta existe vuelve a realizar el cálculo de la Url pero tomando un caracter más.
 
@@ -42,7 +42,7 @@ end
 
 ### API
 
-Existen varios comandos con los que puede probar el API usando cURL. O por medio de una pequeña interfaz, la cual se puede visitar dando click [aquí](https://fullstackchallenge2019.herokuapp.com/)
+Existen varios comandos con los que puede probar el API usando cURL. O por medio de una pequeña interfaz, la cual se puede visitar dando click a este [enlace](https://fullstackchallenge2019.herokuapp.com/)
 
 #### create
 
@@ -53,7 +53,7 @@ $ curl -X POST -d "original_url=https://www.facebook.com/" https://fullstackchal
 
 #### show
 
-Método GET. Muestra la página consultada por medio la Url recortada, la cual devuelve la información por medio de json
+Método GET. Muestra la página consultada por medio la Url recortada, la cual devuelve la información por medio de json. 
 ```bash
 $ curl https://fullstackchallenge2019.herokuapp.com/z24q.json
 ```
@@ -74,11 +74,11 @@ $ curl https://fullstackchallenge2019.herokuapp.com/date.json
 
 ### Nota
 
-* Todas estas consultas puede hacerse por medio de la interfaz con solo escribiendo en el navegador las rutas, quitando la consulta **curl** y la terminacion **.json**
+* Todas estas consultas puede hacerse por medio de la interfaz con solo escribir en el navegador las rutas, quitando la consulta **curl** y la terminacion **.json**
 ```
 https://fullstackchallenge2019.herokuapp.com/top
 ```
-* Puede disfrutas de las aplicación por medio del código desarrollado en React, por medio de este [link](https://github.com/Wikkan/FullStackChallenge2019Web)
+* Puede disfrutas de las aplicación por medio del código desarrollado en React, en el siguiente [enlace](https://github.com/Wikkan/FullStackChallenge2019Web)
 
 ## Construido con
 
