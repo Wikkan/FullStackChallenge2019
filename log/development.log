@@ -41644,3 +41644,10 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/date.json" for 127.0.0.1 at 2019-06-09 23:32:38 -0600
+Processing by UrlsController#date as JSON
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."created_at" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/url.rb:69
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+

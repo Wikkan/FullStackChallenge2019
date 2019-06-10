@@ -64,4 +64,8 @@ class Url < ApplicationRecord
   def top
     Url.order(visit_count: :asc).limit(100).reverse
   end
+
+  def date
+    Url.order(created_at: :asc).limit(1).reverse
+  end
 end

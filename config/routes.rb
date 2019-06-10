@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   	get "shortened", to: "urls#shortened", as: :shortened
   	get "error", to: "urls#error", as: :error
   	get "top", to: "urls#top"
+  	get "date", to: "urls#date"
   	get "/:short_url", to: "urls#show"
   	post "/urls/create", to: "urls#create"
 
