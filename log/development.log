@@ -41665,3 +41665,641 @@ Processing by UrlsController#date as JSON
 Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/top" for 127.0.0.1 at 2019-06-10 13:51:08 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juan/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#top as HTML
+  Rendering urls/top.html.erb within layouts/application
+  [1m[36mUrl Load (29.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" DESC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/views/urls/top.html.erb:26
+  Rendered urls/top.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 620ms (Views: 486.8ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 13:51:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/css/materialize.min.css" for 127.0.0.1 at 2019-06-10 13:51:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/css/materialize.min.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-10 13:51:11 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.8ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:34
+Completed 406 Not Acceptable in 41ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/urls_controller.rb:23:in `rescue in show'
+app/controllers/urls_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2019-06-10 13:51:19 -0600
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 13:51:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/css/materialize.min.css" for 127.0.0.1 at 2019-06-10 13:51:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/css/materialize.min.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-10 13:51:54 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://web.whatsapp.com/"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.9ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://web.whatsapp.com/"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:29
+  [1m[36mUrl Load (0.8ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/dq"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:17
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[36mUrl Create (31.8ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://web.whatsapp.com/"], ["short_url", "https://fullstackchallenge2019.herokuapp.com/dq"], ["visit_count", 0], ["created_at", "2019-06-10 19:51:55.691865"], ["updated_at", "2019-06-10 19:51:55.691865"]]
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[35m (105.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/dq"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[36mUrl Update (0.6ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "WhatsApp Web"], ["updated_at", "2019-06-10 19:51:56.151099"], ["id", 22]]
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[35m (165.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://web.whatsapp.com/"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:29
+Redirected to http://localhost:3000/shortened?obs=New+Url&original_url=https%3A%2F%2Fweb.whatsapp.com%2F&short_url=https%3A%2F%2Ffullstackchallenge2019.herokuapp.com%2Fdq&title=WhatsApp+Web&visit_count=0
+Completed 302 Found in 1608ms (ActiveRecord: 306.2ms)
+
+
+Started GET "/shortened?obs=New+Url&original_url=https%3A%2F%2Fweb.whatsapp.com%2F&short_url=https%3A%2F%2Ffullstackchallenge2019.herokuapp.com%2Fdq&title=WhatsApp+Web&visit_count=0" for 127.0.0.1 at 2019-06-10 13:51:56 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"New Url", "original_url"=>"https://web.whatsapp.com/", "short_url"=>"https://fullstackchallenge2019.herokuapp.com/dq", "title"=>"WhatsApp Web", "visit_count"=>"0"}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 13:51:56 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/css/materialize.min.css" for 127.0.0.1 at 2019-06-10 13:51:56 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/css/materialize.min.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 13:51:56 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-10 13:51:56 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:34
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/urls_controller.rb:23:in `rescue in show'
+app/controllers/urls_controller.rb:8:in `show'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-10 13:53:41 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://espanol.yahoo.com/?p=us"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://espanol.yahoo.com/?p=us"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:46
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://espanol.yahoo.com/?p=us"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:19
+Completed 500 Internal Server Error in 1757ms (ActiveRecord: 3.8ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/models/url.rb:20:in `block in generate_short_url'
+app/models/url.rb:17:in `loop'
+app/models/url.rb:17:in `generate_short_url'
+app/controllers/urls_controller.rb:41:in `create'
+Started GET "/top" for 127.0.0.1 at 2019-06-10 13:53:53 -0600
+Processing by UrlsController#top as HTML
+  Rendering urls/top.html.erb within layouts/application
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" DESC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/views/urls/top.html.erb:26
+  Rendered urls/top.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 13:53:53 -0600
+Started GET "/css/materialize.min.css" for 127.0.0.1 at 2019-06-10 13:53:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/css/materialize.min.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-06-10 13:53:53 -0600
+Processing by UrlsController#show as 
+  Parameters: {"short_url"=>"favicon"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/favicon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:51
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/urls_controller.rb:23:in `rescue in show'
+app/controllers/urls_controller.rb:8:in `show'
+Started GET "/top.json" for 127.0.0.1 at 2019-06-10 13:53:59 -0600
+Processing by UrlsController#top as JSON
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."visit_count" DESC LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/controllers/urls_controller.rb:80
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-10 13:56:33 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juan/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 337ms (Views: 320.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 13:56:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/css/materialize.min.css" for 127.0.0.1 at 2019-06-10 13:56:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/css/materialize.min.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-10 13:56:59 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://twitter.com/?lang=es"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.8ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://twitter.com/?lang=es"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:46
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://twitter.com/?lang=es"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:19
+Completed 500 Internal Server Error in 718ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/models/url.rb:20:in `block in generate_short_url'
+app/models/url.rb:17:in `loop'
+app/models/url.rb:17:in `generate_short_url'
+app/controllers/urls_controller.rb:41:in `create'
+Started POST "/urls/create" for 127.0.0.1 at 2019-06-10 14:09:30 -0600
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://www.instagram.com/?hl=es-la"}
+Can't verify CSRF token authenticity.
+  [1m[36mUrl Load (0.8ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.instagram.com/?hl=es-la"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:31
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/aHR"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:19
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[36mUrl Create (1.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "short_url", "visit_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "https://www.instagram.com/?hl=es-la"], ["short_url", "https://fullstackchallenge2019.herokuapp.com/aHR"], ["visit_count", 0], ["created_at", "2019-06-10 20:09:30.615056"], ["updated_at", "2019-06-10 20:09:30.615056"]]
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[35m (75.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/urls_controller.rb:43
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = ? LIMIT ?[0m  [["short_url", "https://fullstackchallenge2019.herokuapp.com/aHR"], ["LIMIT", 1]]
+  ↳ app/jobs/get_title_job.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[36mUrl Update (0.4ms)[0m  [1m[33mUPDATE "urls" SET "title" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["title", "\nInstagram\n"], ["updated_at", "2019-06-10 20:09:31.103284"], ["id", 23]]
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[35m (77.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/get_title_job.rb:12
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://www.instagram.com/?hl=es-la"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:31
+Redirected to http://localhost:3000/shortened?obs=New+Url&original_url=https%3A%2F%2Fwww.instagram.com%2F%3Fhl%3Des-la&short_url=https%3A%2F%2Ffullstackchallenge2019.herokuapp.com%2FaHR&title=%0AInstagram%0A&visit_count=0
+Completed 302 Found in 959ms (ActiveRecord: 157.0ms)
+
+
+Started GET "/shortened?obs=New+Url&original_url=https%3A%2F%2Fwww.instagram.com%2F%3Fhl%3Des-la&short_url=https%3A%2F%2Ffullstackchallenge2019.herokuapp.com%2FaHR&title=%0AInstagram%0A&visit_count=0" for 127.0.0.1 at 2019-06-10 14:09:31 -0600
+Processing by UrlsController#shortened as HTML
+  Parameters: {"obs"=>"New Url", "original_url"=>"https://www.instagram.com/?hl=es-la", "short_url"=>"https://fullstackchallenge2019.herokuapp.com/aHR", "title"=>"\nInstagram\n", "visit_count"=>"0"}
+  Rendering urls/shortened.html.erb within layouts/application
+  Rendered urls/shortened.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 14:09:31 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/css/materialize.min.css" for 127.0.0.1 at 2019-06-10 14:09:31 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/css/materialize.min.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/js/materialize.min.js" for 127.0.0.1 at 2019-06-10 14:09:31 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/js/materialize.min.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'

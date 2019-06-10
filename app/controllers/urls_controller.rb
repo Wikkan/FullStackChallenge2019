@@ -2,9 +2,9 @@ require 'get_title_job'
 
 class UrlsController < ApplicationController
 
-  @@URL = "https://fullstackchallenge2019.herokuapp.com/" # Url de heroku con la conexion
+  @@URL = "https://fullstackchallenge2019.herokuapp.com/" # Url of heroku with connection
 
-  # Redirecciona a la página con el Url creado y devuelve la consulta en formato json
+  # Redirect to the page with the created Url and return the query in json format
   def show
 
     begin
@@ -28,17 +28,17 @@ class UrlsController < ApplicationController
     end
   end
 
-  # Crea una nueva Url con la Url original y devuelve la consulta en formato json
+  # Create a new URL with the original URL and return the query in json format
   def create
     
     url = Url.new
     url.original_url = params[:original_url]
 
-    if url.sanitize? # Verifica que la Url esté bien escrita
+    if url.sanitize? # Check that the URL is in the correct format
 
-      if url.find? # Verifica si la Url ya fue acortada anteriormente
+      if url.find? # Check if the URL has already been shortened previously
 
-        url.generate_short_url(@@URL)
+        url.short_url_algorithm()
         url.visit_count = 0
         url.save
         
@@ -69,7 +69,7 @@ class UrlsController < ApplicationController
     end
   end
 
-  # Retorna el top de las páginas más visitasdas con el enlace recortado y devuelve la consulta en formato json
+  # Returns the top 100 of the most visited pages with the clipped link and returns the query in json format
   def top
 
     url = Url.new
@@ -82,7 +82,7 @@ class UrlsController < ApplicationController
 
   end
 
-  # Retorna la página más neva en ser recortada y devuelve la consulta en formato json
+  # Returns the newest page to be cropped and returns the query in json format
   def date
 
     url = Url.new

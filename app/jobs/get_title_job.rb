@@ -1,7 +1,7 @@
 require 'metainspector'
 
-# Job para retornar el título de la página en la gema MetaInspector, el cual permite sacar datos de una
-# página por medio de una Url.
+# This job returns the title of the page in the MetaInspector gem, which allows 
+# to extract data from a page by means of an Url.
 class GetTitleJob < ApplicationJob
 
   	def get_title(new_url)
