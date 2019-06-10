@@ -2,16 +2,40 @@
 <html>
 	<head>
 		<title>Shorted</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">     
+      	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>   
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
 	<body>
+		<nav>
+	    	<div class="nav-wrapper cyan darken-3">	    		
+	      		<a href="" class="brand-logo">
+	      			<i class="material-icons prefix">short_text</i>ShortenIt!
+	      		</a>      		
+	    	</div>
+	    </nav>
 		<center>
 			<h2>TOP 100 of URLs_Shortener</h2>
 		</center>
-		<% @top.each do |top| %>
-		   URL original: <%= top.original_url %><br>
-		   Title: <%= top.title %><br>
-		   Short URL: <%= top.short_url %><br>
-		   Visit count: <b><%= top.visit_count %></b><br><br>
-		<% end %>
+		<div class="container">
+			<button class="btn red darken-3" onclick="window.history.back();">Back
+					<i class="material-icons left">keyboard_arrow_left</i>
+			</button>
+			<% 
+			counter = 1
+			@top.each do |top| %>
+				<ul class="collection with-header">
+				   <li class="collection-header cyan darken-1 white-text"><h6>Position <%= counter %></h6></li>
+				   <li class="collection-item"><h6>URL original: <%= top.original_url %></h6></li>
+				   <li class="collection-item"><h6>Title: <%= top.title %></h46></li>
+				   <li class="collection-item"><h6>Short URL: <%= top.short_url %></h6></li>
+				   <li class="collection-item"><h6>Visit count: <b><%= top.visit_count %></h6></li>
+				</ul>
+				<p>--------------------------------------------------------------------------------------------</p>
+			<%
+			counter += 1
+			end %>
+		</div>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
 	</body>
 </html>

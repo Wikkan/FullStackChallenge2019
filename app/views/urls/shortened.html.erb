@@ -2,26 +2,53 @@
 <html>
 	<head>
 		<title>Shorted</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">     
+      	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>   
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
 	<body>
+		<nav>
+	    	<div class="nav-wrapper cyan darken-3">	    		
+	      		<a href="" class="brand-logo">
+	      			<i class="material-icons prefix">short_text</i>ShortenIt!
+	      		</a>      	
+	    	</div>
+	    </nav>
 		<center>
-			<br>
-			<h2>Your URL was shortened</h2>
-			<h3>Shortened URL: 
-				<input readonly type="text" id="go" value="<%= params[:short_url]%>">
-				<button onclick="go()">Go!</button>
-			</h3>
-			<br>
-			<button onclick="window.history.back();">Back</button>
-			<br>
-			<br>
+			<div class="container">
+				<br>
+				<h2>Your URL was shortened</h2>
+				<h3>Shortened URL:</h3>
+				<div class="input-field col s6">
+				    <i class="material-icons prefix">link</i>
+					<input readonly type="text" id="go" value="<%= params[:short_url]%>">	
+		        </div>	
+								
+				<button class="btn green lighten-1" onclick="go()">Go!
+				    <i class="material-icons right">send</i>
+				</button>			
+				<br><br>								
+			</div>
 		</center>	
-		<b>Aditional info:</b><br>
-		Original URL: <%= params[:original_url] %><br>
-		URL title: <%= params[:title] %><br>
-		URL visit count: <%= params[:visit_count] %><br>
-		<%= params[:obs] %><br>
-
+		<div class="container">			
+			<button class="btn red darken-3" onclick="window.history.back();">Back
+					<i class="material-icons left">keyboard_arrow_left</i>
+			</button>
+	      	<ul class="collection with-header">
+		        <li class="collection-header cyan darken-1 white-text"><h4>Aditional info</h4></li>
+		        <li class="collection-item">Original URL: <%= params[:original_url] %></li>
+		        <li class="collection-item">URL title: <%= params[:title] %></li>
+		        <li class="collection-item">URL visit count: <%= params[:visit_count] %></li>
+		        <li class="collection-item"><%= params[:obs] %></li>
+		    </ul>
+		    <!-- <center>
+	            <form action="#", method="post">						
+					<button class="btn green lighten-1" type="submit" name="action">Top
+				    	<i class="material-icons right">sort</i>
+				    </button>
+				</form>
+			</center> -->
+		</div>
 		<script>
 			function go() {
 			  var copyText = document.getElementById("go");
@@ -29,6 +56,6 @@
 			  location.href = copyText.value;
 			}
 		</script>
-
+		<script type="text/javascript" src="js/materialize.min.js"></script>
 	</body>
 </html>
