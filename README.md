@@ -4,7 +4,7 @@ You can see the project specifications in the following [link](https://drive.goo
 
 ## Starting
 
-** Ruby on Rails ** was used to prepare the project.
+**Ruby on Rails** was used to prepare the project.
 
 
 ### Requirements
@@ -21,7 +21,7 @@ For a correct installation follow the steps in the following [link](https://gora
 
 ### Algorithm
 
-* This algorithm takes the original domain of the page, codifies it in a base 64. 
+* This algorithm takes the original domain of the page, codified it in a base 64. 
 * It concatenates to a string formed by 2 characters chosen at random from the same base.
 * After that, join them and verify if this new URL exists in the database. 
 * If it exists, recalculate the URL but take one more character.
